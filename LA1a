@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class calculations {
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.printf("Enter five numbers: ");
+		
+		int one, two, three, four, five;
+		double sum, mean, stanDev;
+		
+		one = input.nextInt();
+		two = input.nextInt();
+		three = input.nextInt();
+		four = input.nextInt();
+		five = input.nextInt();
+		
+		sum = one + two + three + four + five;
+		mean = sum / 5;
+		
+		stanDev = Math.sqrt((Math.pow((one - mean), 2) + Math.pow((two - mean), 2) + Math.pow((three - mean), 2) 
+		+ Math.pow((four - mean), 2) + Math.pow((five - mean), 2)) / 5);
+		
+		System.out.printf("Sum: " + sum + "%n");
+        System.out.printf("Mean: " + mean + "%n");
+        System.out.printf("Standard Deviation: " + stanDev + "%n");
+		
+	}
+}
